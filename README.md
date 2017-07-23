@@ -1,4 +1,4 @@
-# CurtiDemaisFullStack
+# CurtiDemaisMercadoLivre
 Uma aplicacao completa para conectar a diversas API`s.
 
 

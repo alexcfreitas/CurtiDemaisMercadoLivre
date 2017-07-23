@@ -1,0 +1,92 @@
+.box-body {
+	margin: 15px 0 30px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(43, 59, 93, 0.29);
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	-ms-transition: all 0.15s linear;
+	-o-transition: all 0.15s linear;
+	transition: all 0.15s linear;
+}
+
+
+.form-control {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	font-family: Arial, "Open sans", Helvetica, Arial, sans-serif;
+	line-height: 1.428571429;
+	color: #666;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid silver;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	box-shadow: none!important;
+	-webkit-transition: border-color linear 0.2s, box-shadow ease-in-out 0.2s;
+	-webkit-transition: border-color linear 0.2s;
+	-moz-transition: border-color linear 0.2s;
+	-o-transition: border-color linear 0.2s;
+	transition: border-color linear 0.2s;
+
+}
+
+	.form-control:focus {
+		border-color: $corLaranja !important;
+	}
+@media (max-width: 800px) { 
+	.btnCustom {
+		margin-top: 20px;
+	}
+	#alteraTamanho {
+		display:none;
+	}
+ }
+
+.btnCustom {
+	color: $corBackHeader;	
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+	border-radius: 4px;
+		background-color: $corLaranja;
+	border-color: $corLaranja;
+}
+
+	.btnCustom:hover, .btnCustom:focus, .btnCustom:active {
+		background-color: $corBackHeader!important;
+		border-color: $corBackHeader!important;
+		color: $corCinzaDefault;
+	}
+.tamanho {
+margin-left: 20px;
+}
+.curtiForm{
+	text-align: center;
+}
+.btn-primary {
+
+}
+.btn-primary .active .focus, .btn-primary .active:focus, .btn-primary .active:hover, .btn-primary :active .focus, .btn-primary :active :focus, .btn-primary :active :hover {
+
+}

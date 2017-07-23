@@ -1,0 +1,93 @@
+
+.slat-header {
+
+    text-align: center!important;
+}
+
+
+.slat-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;    
+    font-weight: 500;
+    line-height: 1.5;
+}
+ img.photo {
+    border-radius: 50%;
+    margin-top: 30%;
+    margin-bottom: 20px;
+    text-align: center!important;
+}
+
+.slat-header h2 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #999;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 800px){
+ img.photo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 78px;
+    height: 78px;
+}
+.slat-header h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+}
+
+.slat-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+    .shot-byline{
+        margin-top: 4px;
+    }
+.corPrimary{
+    color: $corBackHeader;
+}
+
+
+.tools {
+	margin: 10px 0 0;
+    text-align: center!important;
+    padding: 0px!important;
+
+	li {
+		font-weight: 400;
+		width: auto;
+		display: inline;
+		font-size: 20px;
+		line-height: -1;
+		color: $corBackHeader;;
+		cursor: pointer;
+
+		a {
+			text-decoration: none;
+			color: $corBackHeader;;
+		}
+
+		i {
+            margin-left: 10px;
+            margin-right: 5px;
+		}
+	}
+}
+
+.LikeTrue {
+	color: #ec4989!important;
+}
+
+.align-bottom-text-right{
+    text-align: right!important;
+    float: right;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}

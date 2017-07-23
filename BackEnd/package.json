@@ -1,0 +1,23 @@
+{
+  "name": "backEndCurtiDemais",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/loader.js",
+  "scripts": {
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name curtiDemaisBackEnd"
+  },
+  "keywords": [],
+  "author": "Alexsandro Carvalho de Freitas",
+  "license": "ISC",
+  "devDependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.11.0",
+    "node-restful": "^0.2.5",
+    "nodemon": "^1.11.0",
+    "pm2": "^2.1.5",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,72 @@
+/*--------------------------------------------------
+	[VARIAVEIS]
+----------------------------------------------------*/
+
+
+$font-textos: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-conteudos: 14px;
+
+
+$corBody: #efefef;
+$corPrincipal: #003e61;
+$corSecundaria: #f4f4f4;
+$cinza: #bbb;
+
+// teste cores
+$corBackHeader: #333333;
+$corLaranja: #ffe600;
+$corFontDefault: #cbeaed;
+$corFontOuro: #ceb094;
+$corCinzaDefault: #e0d7d2;
+
+
+
+body {
+	background-color: $corBody;
+	color: $corBackHeader;
+	font-family: $font-textos;
+	font-weight: 100;
+	font-size: 15px;
+	margin: auto;
+	    // color: #444;
+    overflow-x: hidden;
+}
+
+
+.dribbble {
+	position: relative;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(43, 59, 93, 0.29);
+
+	.tools {
+		li {
+			font-size: 12px;
+			float: right;
+
+			a {
+				margin-left: 5px;
+			}
+
+			i {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.dribbble-shot {
+		padding: 10px 10px ;
+		margin-bottom: 30px;
+
+		.group {
+			position: relative;
+		}
+	}
+
+	.shot-img {
+		max-width: 100%;
+		height: 0;
+		padding-bottom: 75%;
+		overflow: hidden;
+	}
+}

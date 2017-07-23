@@ -1,0 +1,17 @@
+/*--------------------------------------------------
+
+----------------------------------------------------*/
+.alignBody {
+	margin-top: 30px;
+}
+
+.alignText{
+	margin-top: -20px;
+	margin-bottom: 30px;
+	font-weight: 400;
+	.right{
+		float: right;
+		font-size: 16px;
+		color: $corFontOuro;
+	}	
+}

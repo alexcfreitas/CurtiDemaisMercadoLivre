@@ -69,7 +69,7 @@ Acontece quando temos a integração completa partindo do Mobile até o SAP por 
 
 
 ![Fluxo Integrado](./fluxoIntegrado.svg)
-<img src="./fluxoIntegrado.svg">
+<img src="./fluxoIntegrado.svg" width="100%">
 
 ## Fluxo Segregado
 Acontece quando não temos a integração completa partindo do Mobile até o SAP,
@@ -80,7 +80,7 @@ Os processos de Apontamentos são registrados por mensageria, utilizamos o servi
 
 
 ![Apontamentos](./apontamentos.svg)
-<img src="./apontamentos.svg">
+<img src="./apontamentos.svg" width="100%">
 
 ### Sincronismos  
 Os Syncs  são  jobs que carregam a base mongoDB , segue a lista dos jobs das apis: 
@@ -109,5 +109,5 @@ O sync de equipamento é diferente dos outros syncs, ele chama os lambdas intern
 
 
 ![Sync Equipamento](./syncEquipamento.svg)
-<img src="./syncEquipamento.svg">
+<img src="./syncEquipamento.svg" width="100%">
 

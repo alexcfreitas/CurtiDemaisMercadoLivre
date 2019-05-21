@@ -66,18 +66,10 @@ Cada Api contem uma lib de infraestrutura, composta pelos seguintes recursos de 
 
 ## Fluxo Integrado
 Acontece quando temos a integração completa partindo do Mobile até o SAP por meio de chamadas http.
-```mermaid
-sequenceDiagram
-Mobile ->> Api: 1 : Obter ordem {numeroOrdem}
-Api ->> Barramento: 2 : Obter Token 
-Barramento-->>Api: 3: {Token}
-Api ->> Barramento: 4 : RFC_ObterDetalheOrdem
-Barramento->> SAP: 5 : BAPI_ObterDetalheOrdem
-SAP-->>Barramento: 6: XML_OrdemDetalhada
-Barramento-->>Api: 7: JSON_OrdemDetalhada
-Api -->> Mobile: 8: Objeto Ordem
 
-```
+
+![Fluxo Integrado](./fluxoIntegrado.svg)
+<img src="./fluxoIntegrado.svg">
 
 ## Fluxo Segregado
 Acontece quando não temos a integração completa partindo do Mobile até o SAP,
@@ -86,25 +78,9 @@ Acontece quando não temos a integração completa partindo do Mobile até o SAP
 ### Apontamentos
 Os processos de Apontamentos são registrados por mensageria, utilizamos o serviço SQS da aws e funciona da seguinte forma: 
 
-```mermaid
-sequenceDiagram
-Mobile ->> Api: Salvar Ordem
-Api ->> Mongo: Save()
-Api -x SQS: Enfileirar Apontamentos - SQS.enqueue()
-SQS --x Api:  Enfileirado!
-Mongo -->> Api: Sucesso
-Api -->> Mobile: Ordem Gravada com Sucesso !
 
-loop Job A Cada Minuto
-    Api ->> SQS: Processar Apontamento - SQS.consume() 
-    SQS -->> Api: Apontamento
-    Api ->> Barramento: ZIPM_APONT_MANUT
-    Barramento ->> SAP: GravarApontamentoSAP()
-    SAP -->> Barramento: Sucesso
-    Barramento -->> Api: Sucesso - SQS.remove()
-end
-
-```
+![Apontamentos](./apontamentos.svg)
+<img src="./apontamentos.svg">
 
 ### Sincronismos  
 Os Syncs  são  jobs que carregam a base mongoDB , segue a lista dos jobs das apis: 
@@ -131,18 +107,7 @@ O sync de locais de instalação  carrega a base de dados seguindo a seguinte es
 
 O sync de equipamento é diferente dos outros syncs, ele chama os lambdas internamente pelo metodo invoke do SDK da aws. Ao chamar o Lambda  syncListaEquipamentos dividimos em blocos de no máximo 500 itens para processamento. para que o processo de execução de cada item seja completo. com isso conseguimos superar o limite de no máximo 15 min em execução do lambda.
 
-```mermaid
-graph TB
-    A(Schedule) --> B[Lambda - syncEquipamento]
-    B -- obterListaEquipamento --> C[Barramento]
-    C -- BAPI_EQUIGETLIST --> S[SAP]
-    S--> C
-    C --> B
-    B--> D{Loop}
-    D --> Z[Lambda - syncListaEquipamentos]
-	Z --> M[MongoDB]
-	M--> Z
-	Z-->D
-	D-- Todos os Equipamentos Cadastrados -->B
-```
+
+![Sync Equipamento](./syncEquipamento.svg)
+<img src="./syncEquipamento.svg">
 

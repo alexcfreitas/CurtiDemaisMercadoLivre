@@ -105,6 +105,5 @@ O sync de locais de instalação  carrega a base de dados seguindo a seguinte es
 
 O sync de equipamento é diferente dos outros syncs, ele chama os lambdas internamente pelo metodo invoke do SDK da aws. Ao chamar o Lambda  syncListaEquipamentos dividimos em blocos de no máximo 500 itens para processamento. para que o processo de execução de cada item seja completo. com isso conseguimos superar o limite de no máximo 15 min em execução do lambda.
 
-
 ![Sync Equipamento](./syncEquipamento.svg)
 

@@ -109,5 +109,4 @@ O sync de equipamento é diferente dos outros syncs, ele chama os lambdas intern
 
 
 ![Sync Equipamento](./syncEquipamento.svg)
-<img src="./syncEquipamento.svg" width="50%">
 
